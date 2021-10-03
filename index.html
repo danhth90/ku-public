@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Kucomic</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://accounts.google.com/gsi/client" async="" defer></script>
+  <style>*,:after,:before{box-sizing:border-box;border:0 solid;border-color:currentColor;}*,:after,:before{--tw-shadow:0 0 #0000;--tw-ring-inset:var(--tw-empty, );--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(66,153,225,0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;}body{margin:0;overflow:hidden;}</style><link rel="stylesheet" href="styles.615afdc95cdafdf9ba70.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.615afdc95cdafdf9ba70.css"></noscript></head>
+  <body>
+    <kucomic-root></kucomic-root>
+  <script src="runtime.5b05abf5fbb671430e48.js" defer></script><script src="polyfills.2b920ff1aa903458d626.js" defer></script><script src="main.4667008e2be38edb9283.js" defer></script>
+  <script>
+     if (typeof window.gapi === 'undefined') {
+            // var url = 'https://apis.google.com/js/platform.js';
+            var url = 'https://accounts.google.com/gsi/client'
+            var head = document.getElementsByTagName('head')[0];
+            var script = document.createElement('script');
+            script.setAttribute('type', 'text/javascript');
+            script.setAttribute('id', 'google_script');
+            script.src = url;
+            head.appendChild(script);
+
+            var abc = document.querySelector('#google_script');
+            abc.addEventListener('load', function() {
+              google.accounts.id.initialize({
+            client_id: "951318234585-046ps88knlskvrak17c1gcfs9lm8aqjv.apps.googleusercontent.com",
+            cookiepolicy: 'single_host_origin',
+            callback: handleLoginGoogle
+            });
+            google.accounts.id.prompt();
+            });
+        }else{
+            
+    google.accounts.id.initialize({
+            client_id: "951318234585-046ps88knlskvrak17c1gcfs9lm8aqjv.apps.googleusercontent.com",
+            cookiepolicy: 'single_host_origin',
+            callback: handleLoginGoogle
+            });
+            google.accounts.id.prompt();
+        }
+        handleLoginGoogle = function(tiken){
+          confirm.log(tiken)
+        }
+  </script>
+
+</body></html>
